@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 40 94% 54%;
+    --primary-foreground: 0 0% 9%;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  body ::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  body ::-webkit-scrollbar-track {
+    border-radius: 6px;
+    box-shadow: none;
+  }
+
+  body ::-webkit-scrollbar-thumb {
+    background-color: rgba(66, 66, 66, 0.4);
+    border-radius: 6px;
+    box-shadow: none;
+  }
+
+  body ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(66, 66, 66, 0.4);
+  }
+
+  input,
+  select,
+  textarea {
+    @apply w-full px-2 py-0.5 text-sm border rounded focus-visible:outline-none focus-visible:border-primary shadow;
+  }
+
+  label {
+    @apply block mb-0 text-[10px] font-medium;
+  }
+}
+
+@layer components {
+
+  .df,
+  .dfc,
+  .dc {
+    @apply flex gap-2;
+  }
+
+  .df,
+  .dc {
+    @apply items-center;
+  }
+
+  .dfc {
+    @apply flex-col;
+  }
+
+  .dc {
+    @apply justify-center;
+  }
+
+  .scroll-y {
+    @apply flex-1 overflow-y-auto;
+  }
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
