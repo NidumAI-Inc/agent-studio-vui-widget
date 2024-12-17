@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { LuSendHorizonal } from "react-icons/lu";
+import { LuSendHorizontal } from "react-icons/lu";
 import { nanoid } from 'nanoid';
 
 import { endPoints } from "../../utils/end-points";
@@ -266,7 +266,7 @@ function Bot() {
           className="dc p-1 mr-1 text-xs rounded-full hover:bg-primary/40 transition-colors text-black"
           disabled={loading}
         >
-          <LuSendHorizonal />
+          <LuSendHorizontal />
         </button>
       </div>
     </>
